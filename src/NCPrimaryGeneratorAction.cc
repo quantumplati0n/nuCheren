@@ -1,13 +1,13 @@
-#include "NSPrimaryGeneratorAction.hh"
+#include "NCPrimaryGeneratorAction.hh"
 
 #include "G4GeneralParticleSource.hh"
 
-NSPrimaryGeneratorAction::NSPrimaryGeneratorAction()
+NCPrimaryGeneratorAction::NCPrimaryGeneratorAction()
 {
   fParticleGun = new G4GeneralParticleSource();
 }
 
-void NSPrimaryGeneratorAction::GeneratePrimaries(G4Event* event)
+void NCPrimaryGeneratorAction::GeneratePrimaries(G4Event* event)
 {
   fParticleGun->GeneratePrimaryVertex(event);
 }
