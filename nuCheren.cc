@@ -9,7 +9,7 @@
 #include "G4VisExecutive.hh"
 #include "globals.hh"
 
-#include "NSRunManager.hh"
+#include "NCRunManager.hh"
 
 int main(int argc, char** argv)
 {
@@ -23,7 +23,7 @@ int main(int argc, char** argv)
     macroFile = argv[1];
   }
 
-  NSRunManager* runManager = new NSRunManager;
+  NCRunManager* runManager = new NCRunManager;
 
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
