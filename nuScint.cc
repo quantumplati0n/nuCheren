@@ -9,7 +9,7 @@
 #include "G4VisExecutive.hh"
 #include "globals.hh"
 
-#include "NCRunManager.hh"
+#include "NSRunManager.hh"
 
 int main(int argc, char** argv)
 {
