@@ -8,11 +8,11 @@
 #include "G4VisAttributes.hh"
 
 //Include library NCDetectorConstruction.hh
-#include "NCDetectorConstruction.hh"
+#include "NSDetectorConstruction.hh"
 
 using namespace CLHEP;
 
-G4VPhysicalVolume* NCDetectorConstruction::Construct() 
+G4VPhysicalVolume* NSDetectorConstruction::Construct() 
 {
   //Get material from NIST database
   G4NistManager* man = G4NistManager::Instance();
