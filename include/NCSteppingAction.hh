@@ -1,16 +1,16 @@
-#ifndef NSSteppingAction_h
-#define NSSteppingAction_h 1
+#ifndef NCSteppingAction_h
+#define NCSteppingAction_h 1
 
 #include "G4UserSteppingAction.hh"
 
-#include "NSEventAction.hh"
+#include "NCEventAction.hh"
 
-class NSSteppingAction : public G4UserSteppingAction {
+class NCSteppingAction : public G4UserSteppingAction {
 private:
-  NSEventAction *fEventAction;
+  NCEventAction *fEventAction;
 
 public:
-  NSSteppingAction(NSEventAction *eventAction) :
+  NCSteppingAction(NCEventAction *eventAction) :
     fEventAction(eventAction) {}
 
   void UserSteppingAction(const G4Step *step);
