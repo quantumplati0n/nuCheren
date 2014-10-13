@@ -2,7 +2,7 @@
 # Setup the project
 
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(NC)
+project(NS)
 
 #----------------------------------------------------------------------------
 # Find and configure Geant4
@@ -46,11 +46,11 @@ target_link_libraries(nuCheren ${Geant4_LIBRARIES} ${ROOT_LIBRARIES})
 # build NS. This is so that we can run the executable directly because it
 # relies on these scripts being in the current working directory.
 
-set(NC_SCRIPTS
+set(NS_SCRIPTS
   5MeVTest.mac
   )
 
-foreach(_script ${NC_SCRIPTS})
+foreach(_script ${NS_SCRIPTS})
   configure_file(
     ${PROJECT_SOURCE_DIR}/${_script}
     ${PROJECT_BINARY_DIR}/${_script}
@@ -62,9 +62,9 @@ endforeach()
 # For internal Geant4 use - but has no effect if you build this
 # example standalone
 #
-add_custom_target(NC DEPENDS nuCheren)
+add_custom_target(NS DEPENDS nuScint)
 
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS nuCheren DESTINATION bin)
+install(TARGETS nuScint DESTINATION bin)
