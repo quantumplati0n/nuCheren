@@ -1,5 +1,5 @@
-#ifndef NSEventAction_h
-#define NSEventAction_h 1
+#ifndef NCEventAction_h
+#define NCEventAction_h 1
 
 #include <map>
 
@@ -22,11 +22,11 @@
 class G4Track;
 
 
-class NSEventAction : public G4UserEventAction, public G4UImessenger
+class NCEventAction : public G4UserEventAction, public G4UImessenger
 {
 public:
-  NSEventAction();
-  ~NSEventAction();
+  NCEventAction();
+  ~NCEventAction();
 
   void BeginOfEventAction(const G4Event *event);
   void EndOfEventAction(const G4Event *event);
