@@ -1,15 +1,15 @@
-#ifndef NSPrimaryGeneratorAction_h
-#define NSPrimaryGeneratorAction_h 1
+#ifndef NCPrimaryGeneratorAction_h
+#define NCPrimaryGeneratorAction_h 1
 
 #include "G4VUserPrimaryGeneratorAction.hh"
 
 class G4Event;
 class G4GeneralParticleSource;
 
-class NSPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction {
+class NCPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction {
 public:
   virtual void GeneratePrimaries(G4Event*);
-  NSPrimaryGeneratorAction();
+  NCPrimaryGeneratorAction();
 
 private:
   G4GeneralParticleSource* fParticleGun;
