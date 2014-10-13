@@ -2,21 +2,21 @@
 
 #include "G4PhysListFactory.hh"
 
-#include "NSRunManager.hh"
-#include "NSDetectorConstruction.hh"
-#include "NSSteppingAction.hh"
-#include "NSEventAction.hh"
-#include "NSPrimaryGeneratorAction.hh"
+#include "NCRunManager.hh"
+#include "NCDetectorConstruction.hh"
+#include "NCSteppingAction.hh"
+#include "NCEventAction.hh"
+#include "NCPrimaryGeneratorAction.hh"
 
-NSRunManager::NSRunManager() {
-  SetUserInitialization(new NSDetectorConstruction);
+NCRunManager::NCRunManager() {
+  SetUserInitialization(new NCDetectorConstruction);
   SetUserInitialization((new G4PhysListFactory)
 			->GetReferencePhysList("QGSP_BERT_HP"));
 
-  SetUserAction(new NSPrimaryGeneratorAction);
-  NSEventAction *eventAction = new NSEventAction;
+  SetUserAction(new NCPrimaryGeneratorAction);
+  NCEventAction *eventAction = new NCEventAction;
   SetUserAction(eventAction);
-  SetUserAction(new NSSteppingAction(eventAction));
+  SetUserAction(new NCSteppingAction(eventAction));
 
   fDirectory = new G4UIdirectory("/NS/");
   fDirectory->SetGuidance("Parameters for nuScint");
@@ -25,10 +25,10 @@ NSRunManager::NSRunManager() {
   fSeedWithTimeCmd->SetGuidance("Seed RNG with UNIX time");
 }
 
-NSRunManager::~NSRunManager() {
+NCRunManager::~NCRunManager() {
 }
 
-void NSRunManager::SetNewValue(G4UIcommand *cmd, G4String args)
+void NCRunManager::SetNewValue(G4UIcommand *cmd, G4String args)
 {
   if (cmd == fSeedWithTimeCmd) {
     int seed = time(0);
