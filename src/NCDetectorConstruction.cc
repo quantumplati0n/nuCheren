@@ -20,8 +20,8 @@ G4VPhysicalVolume* NSDetectorConstruction::Construct()
   G4Material* vacuum = man->FindOrBuildMaterial("G4_Galactic", false);
 
   //Get hydrogen and carbon from NIST database to use for detector material       
-  G4Element* hydrogen = man->FindOrBuildElement("H");
-  G4Element* carbon = man->FindOrBuildElement("C");
+  //G4Element* hydrogen = man->FindOrBuildElement("H");
+  //G4Element* carbon = man->FindOrBuildElement("C");
 
   //Define detector material-- Get from NIST database
   //G4Material* detectorMat = new G4Material("EJ-301", 0.87*g/cm3, 2);
