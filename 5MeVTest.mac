@@ -2,9 +2,9 @@
 #/event/verbose 1
 #/tracking/verbose 1
 
-/NS/seedWithTime
-/NS/setFileName out.root
-/NS/setKB 0.125 # mm/MeV
+/NC/seedWithTime
+/NC/setFileName out.root
+/NC/setKB 0.125 # mm/MeV
 
 /physics_engine/tailor/MuonNuclear on
 
