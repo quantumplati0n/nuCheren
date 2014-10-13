@@ -1,5 +1,5 @@
-#ifndef NSRunManager_h
-#define NSRunManager_h 1
+#ifndef NCRunManager_h
+#define NCRunManager_h 1
 
 #include "G4RunManager.hh"
 #include "globals.hh"
@@ -11,11 +11,11 @@
 #include "G4UIcmdWithoutParameter.hh"
 
 
-class NSRunManager : public G4RunManager, public G4UImessenger
+class NCRunManager : public G4RunManager, public G4UImessenger
 {
 public:
-  NSRunManager();
-  ~NSRunManager();
+  NCRunManager();
+  ~NCRunManager();
 
   void SetNewValue(G4UIcommand *cmd, G4String args);
 
