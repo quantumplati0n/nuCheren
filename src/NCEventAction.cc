@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <cstdio>
 
-#include "NSEventAction.hh"
+#include "NCEventAction.hh"
 
 #include "G4VPhysicalVolume.hh"
 #include "G4UIterminal.hh"
@@ -19,7 +19,7 @@
 using namespace CLHEP;
 
 
-NSEventAction::NSEventAction() :
+NCEventAction::NCEventAction() :
   fKB(0), fFile(NULL), fProTree(NULL), fStepTree(NULL), fEventId(0)
 {
   fFileNameCmd = new G4UIcmdWithAString("/NS/setFileName", this);
@@ -29,7 +29,7 @@ NSEventAction::NSEventAction() :
   fKBCmd->SetGuidance("Set Birks constant");
 }
 
-NSEventAction::~NSEventAction()
+NCEventAction::~NCEventAction()
 {
   if (fFile) {
     fProTree->Write();
@@ -37,7 +37,7 @@ NSEventAction::~NSEventAction()
   }
 }
 
-void NSEventAction::SetNewValue(G4UIcommand *cmd, G4String args)
+void NCEventAction::SetNewValue(G4UIcommand *cmd, G4String args)
 {
   if (cmd == fFileNameCmd) {
     fFile = new TFile(args, "RECREATE");
@@ -58,14 +58,14 @@ void NSEventAction::SetNewValue(G4UIcommand *cmd, G4String args)
   }
 }
 
-void NSEventAction::BeginOfEventAction(const G4Event*)
+void NCEventAction::BeginOfEventAction(const G4Event*)
 {
   fProtons.clear();
 
   // printf("\n***********************************\nNew event\n");
 }
     
-void NSEventAction::EndOfEventAction(const G4Event*)
+void NCEventAction::EndOfEventAction(const G4Event*)
 {
   if (fProTree) {
     fNprotons = fProtons.size();
@@ -88,7 +88,7 @@ void NSEventAction::EndOfEventAction(const G4Event*)
   ++fEventId;
 }
 
-void NSEventAction::Register(G4Track* track, double e1, double e2, double dx)
+void NCEventAction::Register(G4Track* track, double e1, double e2, double dx)
 {
   Proton& p = fProtons[track];
 
