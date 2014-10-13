@@ -18,10 +18,10 @@ NCRunManager::NCRunManager() {
   SetUserAction(eventAction);
   SetUserAction(new NCSteppingAction(eventAction));
 
-  fDirectory = new G4UIdirectory("/NS/");
-  fDirectory->SetGuidance("Parameters for nuScint");
+  fDirectory = new G4UIdirectory("/NC/");
+  fDirectory->SetGuidance("Parameters for nuCheren");
 
-  fSeedWithTimeCmd = new G4UIcmdWithoutParameter("/NS/seedWithTime", this);
+  fSeedWithTimeCmd = new G4UIcmdWithoutParameter("/NC/seedWithTime", this);
   fSeedWithTimeCmd->SetGuidance("Seed RNG with UNIX time");
 }
 
