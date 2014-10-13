@@ -13,13 +13,13 @@
 #include "G4UImessenger.hh"
 #include "G4Run.hh"
 
-#include "NSSteppingAction.hh"
+#include "NCSteppingAction.hh"
 
 #define ID_PROTON 2212
 
 using namespace CLHEP;
 
-void NSSteppingAction::UserSteppingAction(const G4Step *step)
+void NCSteppingAction::UserSteppingAction(const G4Step *step)
 {
   G4StepPoint* preStepPt = step->GetPreStepPoint();
   G4StepPoint* postStepPt = step->GetPostStepPoint();
