@@ -23,7 +23,7 @@ int main(int argc, char** argv)
     macroFile = argv[1];
   }
 
-  NCRunManager* runManager = new NCRunManager;
+  NSRunManager* runManager = new NSRunManager;
 
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
