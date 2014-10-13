@@ -38,7 +38,7 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 
-add_executable(nuCheren nuCheren.cc ${sources} ${headers})
+add_executable(nuScint nuScint.cc ${sources} ${headers})
 target_link_libraries(nuCheren ${Geant4_LIBRARIES} ${ROOT_LIBRARIES})
 
 #----------------------------------------------------------------------------
