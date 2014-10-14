@@ -9,7 +9,7 @@ class G4GeneralParticleSource;
 class NSPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction {
 public:
   virtual void GeneratePrimaries(G4Event*);
-  NCPrimaryGeneratorAction();
+  NSPrimaryGeneratorAction();
 
 private:
   G4GeneralParticleSource* fParticleGun;
