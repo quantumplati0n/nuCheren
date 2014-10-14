@@ -19,7 +19,7 @@ NSRunManager::NSRunManager() {
   SetUserAction(new NSSteppingAction(eventAction));
 
   fDirectory = new G4UIdirectory("/NS/");
-  fDirectory->SetGuidance("Parameters for nuCheren");
+  fDirectory->SetGuidance("Parameters for nuScint");
 
   fSeedWithTimeCmd = new G4UIcmdWithoutParameter("/NS/seedWithTime", this);
   fSeedWithTimeCmd->SetGuidance("Seed RNG with UNIX time");
